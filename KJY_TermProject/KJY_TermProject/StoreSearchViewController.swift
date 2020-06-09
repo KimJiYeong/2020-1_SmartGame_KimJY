@@ -16,9 +16,14 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
     {
         
     }
+    //상권 정보 url
+    /*
+     상권 정보 URL
+     http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?serviceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D&
+     */
     
     var pickerDataSource = ["광진구", "구로구", "동대문구", "종로구"]
-    var url : String = "http://apis.data.go.kr/B553077/api/open/sdsc?ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D&"
+    var url : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?serviceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D&"
     var sgguCd : String = "110023" //디폴트 시군구 코드 - 광진구
     
     

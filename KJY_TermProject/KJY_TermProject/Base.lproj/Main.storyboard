@@ -360,6 +360,16 @@
                                 <segue destination="6cR-Bi-MDy" kind="unwind" unwindAction="doneToStoreSearchViewContorllerWithSegue:" id="cHX-2e-RZB"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="cWw-vJ-yDn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YhY-Fy-R8b">
+                                <rect key="frame" x="342" y="4.5" width="52" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="지도보기"/>
+                            </button>
+                            <connections>
+                                <segue destination="o58-gf-Qjk" kind="push" id="pBk-dP-VL9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tbData" destination="Vgp-xx-ME9" id="Glh-Wd-J9O"/>
@@ -369,6 +379,30 @@
                 <exit id="6cR-Bi-MDy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5797.1014492753629" y="115.84821428571428"/>
+        </scene>
+        <!--상권지도-->
+        <scene sceneID="BBf-L4-rb3">
+            <objects>
+                <viewController id="bbv-gE-rjV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vkm-wy-5A0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c1F-8X-EdJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XLA-Qk-zb9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="상권지도" id="FFj-ma-eKO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="U28-og-HFQ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGS-LW-5xV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7707.2463768115949" y="-541.74107142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fA2-bE-qkG">
@@ -479,7 +513,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R71-2M-oo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6707.2463768115949" y="115.84821428571428"/>
+            <point key="canvasLocation" x="6646" y="812"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Sg7-4v-jMM">
@@ -779,6 +813,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQY-d9-2o7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4886.9565217391309" y="115.84821428571428"/>
+        </scene>
+        <!--상권지도보기-->
+        <scene sceneID="0i4-BF-G8v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o58-gf-Qjk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="상권지도보기" id="1WP-bQ-naR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xq7-RH-Doi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bbv-gE-rjV" kind="relationship" relationship="rootViewController" id="oVV-my-XOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7b-mf-blA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6795.652173913044" y="-542.41071428571422"/>
         </scene>
     </scenes>
 </document>
