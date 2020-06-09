@@ -1,18 +1,20 @@
 //
 //  ViewController.swift
-//  KJY_TermProject
+//  HospitalMap
 //
-//  Created by KpuGame on 2020/06/03.
+//  Created by KpuGame on 2020/05/15.
 //  Copyright © 2020 KimJiYeong. All rights reserved.
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+class ViewController: UIViewController{
+  
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        
     }
 
 
