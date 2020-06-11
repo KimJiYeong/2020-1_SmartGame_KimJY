@@ -45,6 +45,9 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
            return url
        }
      
+  
+       
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
       
@@ -71,8 +74,11 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                 
                 if let detailStoreWideViewController = segue.destination as?
                     DetailStoreWideViewController {
+                    detailStoreWideViewController.temp = storeAreaName
                     detailStoreWideViewController.url = returnDetailURL(v_trarNo: storeAreaName)
+            
                 }
+               
             }
         }
         

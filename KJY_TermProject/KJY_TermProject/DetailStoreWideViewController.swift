@@ -8,15 +8,19 @@
 
 import UIKit
 
-class DetailStoreWideViewController: UIViewController {
+class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
 
-    @IBOutlet weak var DetailArea: UILabel!
-    @IBOutlet weak var DetailSedoCode: UILabel!
-    @IBOutlet weak var DetailSdoName: UILabel!
-    @IBOutlet weak var DetailStoreNum: UILabel!
-    @IBOutlet weak var storeName: UILabel!
+    @IBOutlet weak var trarNoLabel: UILabel!
+    @IBOutlet weak var ctprvnNmLabel: UILabel!
+    @IBOutlet weak var signguNmLabel: UILabel!
+    @IBOutlet weak var trarAreaLabel: UILabel!
+    @IBOutlet weak var stdrDtLabel: UILabel!
     
-    var url : String?
+    @IBOutlet weak var storeName: UILabel!
+   var url : String?
+    var temp : String?
+     // MARK: - var
+   
     var parser = XMLParser()
     var posts = NSMutableArray()
     var elements = NSMutableDictionary()
@@ -25,24 +29,30 @@ class DetailStoreWideViewController: UIViewController {
     var addr = NSMutableString()
     //이전 페이지에서 상권 번호를 받아옴
     
-    override func viewDidLoad() {
-        reMatch()
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    var taraNo = NSMutableString() //상권번호
+    var mainTrarNo = NSMutableString() //상권명
+    var ctprvnNm = NSMutableString() //시도명
+    var signguNm = NSMutableString() // 시군구명
+    var trarArea = NSMutableString() //면적
+    var stdrDt = NSMutableString() // 데이터 기준 일자
     
-  
+  override func viewDidLoad() {
+      super.viewDidLoad()
+      beginParsing()
+         reMatch()
+
+  }
     
        // MARK: - Parser
           
-      func beginParsing() {
-          posts = []
-          parser = XMLParser(contentsOf: (URL(string: url!))!)!
-         // parser.delegate = self
-          parser.parse()
-         
-      }
+       func beginParsing() {
+            posts = []
+            parser = XMLParser(contentsOf: (URL(string: url!))!)!
+            parser.delegate = self
+            parser.parse()
+       
+           // tbData!.reloadData()
+        }
       
     func parser(_ parser:XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName : String?, attributes attributeDice: [String: String])
       {
@@ -56,41 +66,113 @@ class DetailStoreWideViewController: UIViewController {
               yadmNm = ""
               addr = NSMutableString()
               addr = ""
-             
-          }
+            
+            taraNo = NSMutableString() //상권번호
+            taraNo = ""
+            mainTrarNo = NSMutableString() //상권명
+            mainTrarNo = ""
+            ctprvnNm = NSMutableString() //시도명
+            ctprvnNm = ""
+            signguNm = NSMutableString() // 시군구명
+            signguNm = ""
+            trarArea = NSMutableString() //면적
+            trarArea = ""
+            stdrDt = NSMutableString() // 데이터 기준 일자
+            stdrDt = ""
+        }
       }
       
       func parser(_ parser: XMLParser, foundCharacters string: String)
       {
           if element.isEqual(to: "mainTrarNm")
           {
-              yadmNm.append(string)
+              mainTrarNo.append(string)
           }
           else if element.isEqual(to: "trarNo")
           {
-              addr.append(string)
+              taraNo.append(string)
           }
+        else if element.isEqual(to: "ctprvnNm")
+         {
+             ctprvnNm.append(string)
+         }
+         else if element.isEqual(to: "signguNm")
+          {
+              signguNm.append(string)
+            
+            }
+      else if element.isEqual(to: "trarArea")
+       {
+           trarArea.append(string)
          
-      }
-      
-      //피드 데이터를 딕서너리에 저장
-        func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-            if (elementName as NSString).isEqual(to: "item")
+         }
+        else if element.isEqual(to: "stdrDt")
             {
-                if !yadmNm.isEqual(nil)
-                {
-                    elements.setObject(yadmNm, forKey: "mainTrarNm" as NSCopying)
+                stdrDt.append(string)
+              
+              }
+      }
+   
+    func reMatch(){
+        storeName.text = mainTrarNo as String
+        trarNoLabel.text = taraNo as String
+        ctprvnNmLabel.text = ctprvnNm as String
+        signguNmLabel.text = signguNm as String
+        trarAreaLabel.text = trarArea as String
+        stdrDtLabel.text = stdrDt as String
+    }
+    
+       // MARK: - Detail View
+     var storeAreaName = ""
+    
+    func returnStoreListURL(v_trarNo : String) -> String?
+           {
+               let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeListInArea?"
+               let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
+              //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
+               var url : String = ""
+               url = api
+               url += "key="
+              url += v_trarNo
+               url += serKey
+               return url
+           }
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+      
+        if segue.identifier == "SegueToDetailStoreInArea" {
+            
+            storeAreaName = taraNo as String
+                           for (index, value) in storeAreaName.enumerated() {
+                               // index는 정수입니다.
+                               print("index: \(index), value : \(value)")  // index: 0, value : H
+                           }
+                      
+                           //그거의 위치를 읽어 offsetBya에 입력함
+                           let rangeOfWorld = storeAreaName.index(storeAreaName.endIndex, offsetBy: -5)..<storeAreaName.endIndex
+                           storeAreaName.removeSubrange(rangeOfWorld) // 결과 : 뒤에 들어가는게 무조건 \n\t\t\t 이니
+                           
+                           
+                           
+                           //정상적으로 잘 지워졌는지 확인하기
+                           for i in storeAreaName {
+                               print(i)
+                           }
+              
+             if let navController = segue.destination as? UINavigationController {
+                if let detailStoreInAreaTableViewController = navController.topViewController as?
+                 DetailStoreInAreaTableViewController {
+                    detailStoreInAreaTableViewController.url = returnStoreListURL(v_trarNo: storeAreaName)
+      
                 }
-                if !addr.isEqual(nil) {
-                    elements.setObject(addr, forKey: "trarNo" as NSCopying)
-                }
-
-                posts.add(elements)
+                
+            }
             }
         }
-    
-    func reMatch(){
-        storeName.text = yadmNm as String
+        
+      
     }
+    
+    
 
-}

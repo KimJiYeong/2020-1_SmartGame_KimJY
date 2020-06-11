@@ -10,6 +10,10 @@
 		A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B560248E8EDF007063E4 /* StoreTableViewController.swift */; };
 		A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B562248E974F007063E4 /* StoreSearchViewController.swift */; };
 		A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */; };
+		A1785D2724924708006FEB9B /* DetailStoreInAreaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D2624924708006FEB9B /* DetailStoreInAreaTableViewController.swift */; };
+		A1785D29249251D9006FEB9B /* StoreInAreaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D28249251D9006FEB9B /* StoreInAreaMapViewController.swift */; };
+		A1785D2C24925299006FEB9B /* StoreArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D2B24925299006FEB9B /* StoreArea.swift */; };
+		A1785D2E249252AD006FEB9B /* Artworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D2D249252AD006FEB9B /* Artworks.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
 		A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B62487287D00E6B045 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 		A156B560248E8EDF007063E4 /* StoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewController.swift; sourceTree = "<group>"; };
 		A156B562248E974F007063E4 /* StoreSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchViewController.swift; sourceTree = "<group>"; };
 		A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoreWideViewController.swift; sourceTree = "<group>"; };
+		A1785D2624924708006FEB9B /* DetailStoreInAreaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailStoreInAreaTableViewController.swift; sourceTree = "<group>"; };
+		A1785D28249251D9006FEB9B /* StoreInAreaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInAreaMapViewController.swift; sourceTree = "<group>"; };
+		A1785D2B24925299006FEB9B /* StoreArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreArea.swift; sourceTree = "<group>"; };
+		A1785D2D249252AD006FEB9B /* Artworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artworks.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1785D2A24925284006FEB9B /* Mapkit */ = {
+			isa = PBXGroup;
+			children = (
+				A1785D2B24925299006FEB9B /* StoreArea.swift */,
+				A1785D2D249252AD006FEB9B /* Artworks.swift */,
+			);
+			path = Mapkit;
+			sourceTree = "<group>";
+		};
 		A1E4D6A62487287D00E6B045 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +79,8 @@
 		A1E4D6B12487287D00E6B045 /* KJY_TermProject */ = {
 			isa = PBXGroup;
 			children = (
+				A1785D2A24925284006FEB9B /* Mapkit */,
+				A1785D2624924708006FEB9B /* DetailStoreInAreaTableViewController.swift */,
 				A1E4D6B22487287D00E6B045 /* AppDelegate.swift */,
 				A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */,
 				A1E4D6B62487287D00E6B045 /* ViewController.swift */,
@@ -72,6 +91,7 @@
 				A156B560248E8EDF007063E4 /* StoreTableViewController.swift */,
 				A156B562248E974F007063E4 /* StoreSearchViewController.swift */,
 				A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */,
+				A1785D28249251D9006FEB9B /* StoreInAreaMapViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -147,10 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1785D2E249252AD006FEB9B /* Artworks.swift in Sources */,
 				A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */,
 				A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */,
+				A1785D2724924708006FEB9B /* DetailStoreInAreaTableViewController.swift in Sources */,
+				A1785D29249251D9006FEB9B /* StoreInAreaMapViewController.swift in Sources */,
 				A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */,
 				A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */,
+				A1785D2C24925299006FEB9B /* StoreArea.swift in Sources */,
 				A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */,
 				A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */,
 			);
