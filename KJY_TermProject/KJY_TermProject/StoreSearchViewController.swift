@@ -23,7 +23,7 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
      http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?serviceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D&
      */
     
-    var pickerDataSource = ["서울특별시", "인천광역시", "부산광역시", "대구광역시"]
+    var pickerDataSource = ["서울특별시", "부산광역시", "대구광역시", "인천광역시", "광주광역시","대전광역시","울산광역시" , "세종특별자치시","경기도","강원도" ,"충청북도", "충청남도" , "전라북도", "전라남도" , "경상북도", "경상남도", "제주특별자치도"]
  
     var sgguCd : String = "110023" //디폴트 시군구 코드 - 광진구
     var key : Int = 0
@@ -59,17 +59,56 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if row == 0 {
-            key = 11 //광진구
+            key = 11 //서울
         }
         else if row == 1 {
-            key = 28 //구로구
+            key = 26 //부산
         }
         else if row == 2 {
-            key = 26 //동대문구
+            key = 27 //대구
+        }
+        else if row == 3 {
+            key = 28 //인천
+        }
+        else if row == 4 {
+            key = 29 //광주
+        }
+        else if row == 5 {
+            key = 30 //대전
+        }
+        else if row == 6 {
+            key = 31 //울산
+        }
+        else if row == 7 {
+            key = 36 //세종
+        }
+        else if row == 8 {
+            key = 41 //경기
+        }
+        else if row == 9 {
+            key = 42 //강원
+        }
+        else if row == 10 {
+            key = 43 //충북
+        }
+        else if row == 11 {
+            key = 44 //충남
+        }
+        else if row == 12 {
+            key = 45 //전북
+        }
+        else if row == 13 {
+            key = 46 //전남
+        }
+        else if row == 14 {
+            key = 47 //경북
+        }
+        else if row == 15 {
+            key = 48 //경남
         }
         else //==3==
         {
-            key = 27 //종로구 코드
+            key = 50 //제주 코드
         }
     }
     

@@ -19,7 +19,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
     var element = NSString()
     var yadmNm = NSMutableString()
     var addr = NSMutableString()
-    
+    var trarNoo = NSMutableString()
    // var XPos = NSMutableString()
    // var YPos = NSMutableString()
     
@@ -107,7 +107,8 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
             yadmNm = ""
             addr = NSMutableString()
             addr = ""
-           
+           trarNoo = NSMutableString()
+                      trarNoo = ""
         }
     }
     
@@ -117,9 +118,13 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
         {
             yadmNm.append(string)
         }
-        else if element.isEqual(to: "trarNo")
+        else if element.isEqual(to: "signguNm")
         {
             addr.append(string)
+        }
+        else if element.isEqual(to: "trarNo")
+        {
+            trarNoo.append(string)
         }
        
     }
@@ -133,9 +138,11 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                   elements.setObject(yadmNm, forKey: "mainTrarNm" as NSCopying)
               }
               if !addr.isEqual(nil) {
-                  elements.setObject(addr, forKey: "trarNo" as NSCopying)
+                  elements.setObject(addr, forKey: "signguNm" as NSCopying)
               }
-
+            if !trarNoo.isEqual(nil) {
+                           elements.setObject(trarNoo, forKey: "trarNo" as NSCopying)
+                       }
               posts.add(elements)
           }
       }
@@ -144,7 +151,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
 
         // Configure the cell...
         cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "mainTrarNm") as! NSString as String
-        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "trarNo") as! NSString as String
+        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "signguNm") as! NSString as String
 
         return cell
     }

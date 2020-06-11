@@ -12,7 +12,7 @@ class StoreInAreaMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var posts = NSMutableArray()
     
-    let regionRadius: CLLocationDistance = 5000
+    let regionRadius: CLLocationDistance = 500
     
     func centerMapOnLocation(location: CLLocation ) {
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -23,25 +23,29 @@ class StoreInAreaMapViewController: UIViewController, MKMapViewDelegate {
     var stores : [StoreArea] = []
     
     func loadInitialData() {
-        for __ in posts {
-            let bizesNm = (posts as AnyObject).value(forKey: "bizesNm") as! NSString as String
-            let rdnmAddr   = (posts as AnyObject).value(forKey: "rdnmAddr") as! NSString as String
-            let XPos   = (posts as AnyObject).value(forKey: "lon") as! NSString as String
-            let YPos   = (posts as AnyObject).value(forKey: "lat") as! NSString as String
+        var initalLocation : CLLocation?
+        for post in posts {
+            let bizesNm2 = (post as AnyObject).value(forKey: "bizesNm") as! NSString as String
+            let rdnmAddr   = (post as AnyObject).value(forKey: "rdnmAddr") as! NSString as String
+            let XPos   = (post as AnyObject).value(forKey: "lon") as! NSString as String
+            let YPos   = (post as AnyObject).value(forKey: "lat") as! NSString as String
             let lat    = (YPos as NSString).doubleValue
             let lon    = (XPos as NSString).doubleValue
-            
-            let store = StoreArea(title: bizesNm, locationName: rdnmAddr, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
+            initalLocation = CLLocation(latitude: lat, longitude: lon)
+            let store = StoreArea(title: bizesNm2, locationName: rdnmAddr, coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lon))
             
             stores.append(store)
             
         }
+        centerMapOnLocation(location: initalLocation!)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let location = view.annotation as! StoreArea
         let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+        
         location.mapItem().openInMaps(launchOptions: launchOptions)
+       
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -58,14 +62,14 @@ class StoreInAreaMapViewController: UIViewController, MKMapViewDelegate {
             view.canShowCallout = true
             view.calloutOffset = CGPoint(x: -5, y: 5)
             view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
         }
         return view
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let initialLocation = CLLocation(latitude: 37.5384514, longitude: 127.079764)
-        centerMapOnLocation(location: initialLocation)
+
         mapView.delegate = self
         loadInitialData()
         mapView.addAnnotations(stores)
