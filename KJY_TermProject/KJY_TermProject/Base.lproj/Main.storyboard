@@ -117,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yF5-VV-72j">
-                                <rect key="frame" x="129" y="245" width="157" height="86"/>
+                                <rect key="frame" x="129" y="245" width="157" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UoR-ps-Zfm" id="6PC-X9-vdP"/>
@@ -131,10 +131,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SuJ-05-8Mf">
-                                <rect key="frame" x="280" y="720" width="39" height="37"/>
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJy-d5-lMe">
+                                <rect key="frame" x="129" y="407" width="157" height="163"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="중분류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GI-As-pN3">
+                                <rect key="frame" x="52" y="478" width="45" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KGx-Q1-dFF"/>
@@ -354,7 +361,7 @@
                             <outlet property="delegate" destination="P0T-ob-sit" id="Xrz-5i-sww"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="상권상세정보" id="flx-Ec-KKD">
+                    <navigationItem key="navigationItem" title="지역 상권상세정보" id="flx-Ec-KKD">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Z47-Jo-uMn">
                             <connections>
                                 <segue destination="6cR-Bi-MDy" kind="unwind" unwindAction="doneToStoreSearchViewContorllerWithSegue:" id="cHX-2e-RZB"/>
@@ -794,7 +801,7 @@
         <!--Navigation Controller-->
         <scene sceneID="FzE-QL-Ntz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vcd-WE-wnS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnTap="YES" id="Vcd-WE-wnS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="0Z0-Xs-Uh9"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
