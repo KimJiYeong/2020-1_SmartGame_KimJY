@@ -20,12 +20,64 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
     var yadmNm = NSMutableString()
     var addr = NSMutableString()
     
+   // var XPos = NSMutableString()
+   // var YPos = NSMutableString()
+    
+    var storeAreaName = ""
+    var storeAreaName_utf8 = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
 
     }
-
+// MARK: - Detail View
+    func returnDetailURL(v_trarNo : String) -> String?
+       {
+           let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?"
+           let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
+          //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
+           var url : String = ""
+           url = api
+           url += "key="
+          url += v_trarNo
+           url += serKey
+           return url
+       }
+   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+      
+        if segue.identifier == "segueToStoreDetail" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPath(for: cell)
+                storeAreaName = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "trarNo") as! NSString as String
+                    
+                //인덱스 내부에 /t찍히는걸 막아야함
+                //1 /가 나오는 순간을 파악함
+                
+                //그거의 위치를 읽어 offsetBya에 입력함
+                let rangeOfWorld = storeAreaName.index(storeAreaName.endIndex, offsetBy: -6)..<storeAreaName.endIndex
+                storeAreaName.removeSubrange(rangeOfWorld) // 결과 : Hello
+                
+                
+                storeAreaName_utf8 = storeAreaName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                //정상적으로 잘 지워졌는지 확인하기
+                for i in storeAreaName {
+                    print(i)
+                }
+                
+                if let detailStoreWideViewController = segue.destination as?
+                    DetailStoreWideViewController {
+                    detailStoreWideViewController.url = returnDetailURL(v_trarNo: storeAreaName)
+                }
+            }
+        }
+        
+      
+    }
+    
       // MARK: - Parser
         
     func beginParsing() {
@@ -58,7 +110,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
         {
             yadmNm.append(string)
         }
-        else if element.isEqual(to: "ctprvnNm")
+        else if element.isEqual(to: "trarNo")
         {
             addr.append(string)
         }
@@ -74,7 +126,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                   elements.setObject(yadmNm, forKey: "mainTrarNm" as NSCopying)
               }
               if !addr.isEqual(nil) {
-                  elements.setObject(addr, forKey: "ctprvnNm" as NSCopying)
+                  elements.setObject(addr, forKey: "trarNo" as NSCopying)
               }
 
               posts.add(elements)
@@ -85,7 +137,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
 
         // Configure the cell...
         cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "mainTrarNm") as! NSString as String
-        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "ctprvnNm") as! NSString as String
+        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "trarNo") as! NSString as String
 
         return cell
     }

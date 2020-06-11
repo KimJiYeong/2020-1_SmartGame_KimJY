@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B560248E8EDF007063E4 /* StoreTableViewController.swift */; };
 		A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B562248E974F007063E4 /* StoreSearchViewController.swift */; };
+		A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
 		A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B62487287D00E6B045 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		A156B560248E8EDF007063E4 /* StoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewController.swift; sourceTree = "<group>"; };
 		A156B562248E974F007063E4 /* StoreSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchViewController.swift; sourceTree = "<group>"; };
+		A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoreWideViewController.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				A1E4D6C02487287E00E6B045 /* Info.plist */,
 				A156B560248E8EDF007063E4 /* StoreTableViewController.swift */,
 				A156B562248E974F007063E4 /* StoreSearchViewController.swift */,
+				A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */,
 				A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */,
 				A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */,
+				A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */,
 				A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

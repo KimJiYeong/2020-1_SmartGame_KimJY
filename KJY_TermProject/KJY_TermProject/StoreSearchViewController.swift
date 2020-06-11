@@ -27,6 +27,8 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
  
     var sgguCd : String = "110023" //디폴트 시군구 코드 - 광진구
     var key : Int = 0
+
+    
     
     func returnURL(ctprvnCD: Int) -> String?
     {
@@ -80,6 +82,8 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
                 }
             }
         }
+
+      
     }
     
     override func viewDidLoad() {
