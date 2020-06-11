@@ -44,8 +44,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
            url += serKey
            return url
        }
-   
-    
+     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
       
@@ -54,12 +53,14 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                 let indexPath = tableView.indexPath(for: cell)
                 storeAreaName = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "trarNo") as! NSString as String
                     
-                //인덱스 내부에 /t찍히는걸 막아야함
-                //1 /가 나오는 순간을 파악함
-                
+                for (index, value) in storeAreaName.enumerated() {
+                    // index는 정수입니다.
+                    print("index: \(index), value : \(value)")  // index: 0, value : H
+                }
+           
                 //그거의 위치를 읽어 offsetBya에 입력함
-                let rangeOfWorld = storeAreaName.index(storeAreaName.endIndex, offsetBy: -6)..<storeAreaName.endIndex
-                storeAreaName.removeSubrange(rangeOfWorld) // 결과 : Hello
+                let rangeOfWorld = storeAreaName.index(storeAreaName.endIndex, offsetBy: -5)..<storeAreaName.endIndex
+                storeAreaName.removeSubrange(rangeOfWorld) // 결과 : 뒤에 들어가는게 무조건 \n\t\t\t 이니
                 
                 
                 storeAreaName_utf8 = storeAreaName.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
