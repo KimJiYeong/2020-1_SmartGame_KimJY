@@ -163,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="3936.2318840579715" y="115.84821428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--MyMenu-->
         <scene sceneID="WAo-mP-ykl">
             <objects>
-                <viewController id="U7T-Ls-Yd0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMenuID" title="MyMenu" id="U7T-Ls-Yd0" customClass="MyMenuViewController" customModule="KJY_TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ImC-Ie-Nse">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +208,7 @@
                                 <rect key="frame" x="369" y="452" width="25" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="chv-4h-HZ2" kind="push" id="yJd-at-pzA"/>
+                                    <segue destination="olm-Qd-nHK" kind="show" identifier="ToStopWatch" id="09f-7E-9tb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="메모" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vv5-ub-r2g">
@@ -274,6 +274,9 @@
                         <viewLayoutGuide key="safeArea" id="d3J-1X-pte"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rt8-XV-Hu9"/>
+                    <connections>
+                        <outlet property="TimeLable" destination="TYi-0h-EC6" id="eS4-bS-JzB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMB-gY-4YH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,7 +598,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q67-rC-nZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6112" y="1482"/>
+            <point key="canvasLocation" x="7021.739130434783" y="1481.9196428571429"/>
         </scene>
         <!--MapView-->
         <scene sceneID="Sg7-4v-jMM">
@@ -620,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ota-R5-Qg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6803" y="1482"/>
+            <point key="canvasLocation" x="7713.04347826087" y="1481.9196428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ptr-wf-QhQ">
@@ -690,7 +693,7 @@
         <!--원하는 상가 거리 체크-->
         <scene sceneID="emx-jk-1nX">
             <objects>
-                <viewController id="chv-4h-HZ2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StopWatchID" id="chv-4h-HZ2" customClass="StopWatchViewController" customModule="KJY_TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hm-zR-Nr4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -726,28 +729,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eki-KA-vBT">
-                                <rect key="frame" x="91" y="317" width="58" height="40"/>
+                                <rect key="frame" x="62" y="317" width="83" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="STOP"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartAction:" destination="chv-4h-HZ2" eventType="touchUpInside" id="7t6-9K-n9y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yr-yb-Huq">
                                 <rect key="frame" x="167" y="316" width="71" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="PAUSE"/>
+                                <connections>
+                                    <action selector="PauseAction:" destination="chv-4h-HZ2" eventType="touchUpInside" id="kP5-58-cKR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMk-cu-kNI">
                                 <rect key="frame" x="175" y="382" width="56" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="SaveAction:" destination="chv-4h-HZ2" eventType="touchUpInside" id="rmU-d7-MPu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ha-yE-Wy1">
                                 <rect key="frame" x="261" y="316" width="68" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="ResetAction:" destination="chv-4h-HZ2" eventType="touchUpInside" id="SpY-Hj-wSd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -769,11 +784,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u7D-pO-k5T"/>
                     </view>
-                    <navigationItem key="navigationItem" title="원하는 상가 거리 체크" id="EbL-H1-p95"/>
+                    <navigationItem key="navigationItem" title="원하는 상가 거리 체크" id="EbL-H1-p95">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="J8X-mC-CbK">
+                            <connections>
+                                <action selector="DoneAction:" destination="chv-4h-HZ2" id="BGB-Ge-4o7"/>
+                                <segue destination="Pu5-gn-VcY" kind="unwind" unwindAction="doneToStopWatchWithSegue:" id="4BH-xF-O3k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="DoneButton" destination="J8X-mC-CbK" id="Uhp-qD-BYY"/>
+                        <outlet property="firstTime" destination="yd8-eg-sug" id="Pgh-tX-NwP"/>
+                        <outlet property="lastTime" destination="9WT-ev-JMT" id="4hk-Nx-Dsp"/>
+                        <outlet property="middleTime" destination="ID0-6Y-1pn" id="26u-V5-v3H"/>
+                        <outlet property="pause" destination="7yr-yb-Huq" id="e1i-Db-sTg"/>
+                        <outlet property="reset" destination="0ha-yE-Wy1" id="Oy2-3P-iTO"/>
+                        <outlet property="save" destination="UMk-cu-kNI" id="OLC-N1-74p"/>
+                        <outlet property="start" destination="Eki-KA-vBT" id="NHi-Ra-DcY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YN-oX-hRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Pu5-gn-VcY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4674" y="812"/>
+            <point key="canvasLocation" x="4184.057971014493" y="1538.8392857142856"/>
         </scene>
         <!--월 수익 측정-->
         <scene sceneID="Qow-XT-TVO">
@@ -936,6 +969,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCY-U6-HKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6804" y="828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZxS-hD-40k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="olm-Qd-nHK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Ap2-yV-N11"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QdQ-Qw-a1F">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="chv-4h-HZ2" kind="relationship" relationship="rootViewController" id="3jC-Pv-gew"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeP-4h-etx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3273.913043478261" y="1538.8392857142856"/>
         </scene>
     </scenes>
     <resources>

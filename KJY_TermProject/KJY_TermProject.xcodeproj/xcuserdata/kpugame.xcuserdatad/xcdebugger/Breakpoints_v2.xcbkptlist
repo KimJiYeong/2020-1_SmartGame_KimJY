@@ -344,7 +344,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "1910">
+                  offsetFromSymbolStart = "1979">
                </Location>
                <Location
                   uuid = "304E56C0-5497-4CF4-BB32-5FC35EC03B0A - bbe3965b6ff9e318"
@@ -359,7 +359,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "1875">
+                  offsetFromSymbolStart = "1944">
                </Location>
                <Location
                   uuid = "304E56C0-5497-4CF4-BB32-5FC35EC03B0A - 58b1a53a62f3515e"
@@ -374,7 +374,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "1810">
+                  offsetFromSymbolStart = "1879">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -392,6 +392,86 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "beginParsing()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C6053B4-0F67-41FF-9D32-5C8B7ADBD559"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/StopWatchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "StopWatchViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E91CCE5-4C9A-4594-BD5C-E6078B7B584F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/StopWatchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "SaveAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A82F3CB-C62D-4B54-86BE-B5AD6CACA59E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/StopWatchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "saveTime()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A80D386-E22B-4230-A770-1B3927C7A784"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/StopWatchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B538708A-9F53-4370-B86C-B5316593DBEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/MyMenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
