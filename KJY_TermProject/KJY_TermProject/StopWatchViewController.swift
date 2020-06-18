@@ -24,7 +24,8 @@ class StopWatchViewController: UIViewController {
     
     @IBOutlet weak var DoneButton: UIBarButtonItem!
     @IBAction func DoneAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "doneToStopWatchWithSegue", sender: self)
+        //self.performSegue(withIdentifier: "doneToStopWatchWithSegue", sender: self)
+        
             
     }
      override func prepare(for segue: UIStoryboardSegue, sender: Any?)

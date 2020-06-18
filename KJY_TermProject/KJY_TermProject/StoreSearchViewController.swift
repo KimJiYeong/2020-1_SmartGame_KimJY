@@ -8,6 +8,7 @@
 //상권 검색 코드 - 병원정보 코드 참고해서 좀 더 구성해야할 듯
 //코드 내에서 데이터 저장한뒤에 그 데이터 내에서 저장해서 불러오던지 vs 어떻게든 코드 읽는거 알아오던지 2개인듯
 import UIKit
+
 class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
   
   
@@ -27,22 +28,10 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
  
     var sgguCd : String = "110023" //디폴트 시군구 코드 - 광진구
     var key : Int = 0
-
+    var sUrl = SearchURL()
     
     
-    func returnURL(ctprvnCD: Int) -> String?
-    {
-        let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneInAdmi?"
-        let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
-       //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
-        var url : String = ""
-        url = api
-        url += "divId=ctprvnCd&"
-        url += ("key=" + String(ctprvnCD))
-        url += serKey
-        return url
-    }
-
+    
 
     // MARK: - Table view data source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -117,7 +106,7 @@ class StoreSearchViewController: UIViewController, UIPickerViewDelegate, UIPicke
         if segue.identifier == "segueToStoreSearchTableView" {
             if let navController = segue.destination as? UINavigationController {
                 if let storeTableViewController = navController.topViewController as? StoreTableViewController {
-                    storeTableViewController.url = returnURL(ctprvnCD: key)
+                    storeTableViewController.url = self.sUrl.returnURL(ctprvnCD: key)
                 }
             }
         }

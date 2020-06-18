@@ -17,6 +17,7 @@
 		A1785D3224948C21006FEB9B /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D3124948C21006FEB9B /* StopWatchViewController.swift */; };
 		A1785D342494E596006FEB9B /* MyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D332494E596006FEB9B /* MyMenuViewController.swift */; };
 		A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D352494EC19006FEB9B /* classmymenu.swift */; };
+		A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF49A6249B879100548C3C /* SearchURL.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
 		A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B62487287D00E6B045 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		A1785D3124948C21006FEB9B /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		A1785D332494E596006FEB9B /* MyMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuViewController.swift; sourceTree = "<group>"; };
 		A1785D352494EC19006FEB9B /* classmymenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classmymenu.swift; sourceTree = "<group>"; };
+		A1DF49A6249B879100548C3C /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				A1785D3124948C21006FEB9B /* StopWatchViewController.swift */,
 				A1785D332494E596006FEB9B /* MyMenuViewController.swift */,
 				A1785D352494EC19006FEB9B /* classmymenu.swift */,
+				A1DF49A6249B879100548C3C /* SearchURL.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				A1785D2E249252AD006FEB9B /* Artworks.swift in Sources */,
 				A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */,
 				A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */,
+				A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */,
 				A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */,
 				A1785D342494E596006FEB9B /* MyMenuViewController.swift in Sources */,
 				A1785D2724924708006FEB9B /* DetailStoreInAreaTableViewController.swift in Sources */,
