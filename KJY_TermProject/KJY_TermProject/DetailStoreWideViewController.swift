@@ -9,7 +9,9 @@
 import UIKit
 
 class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
-
+    
+    
+    
     @IBOutlet weak var trarNoLabel: UILabel!
     @IBOutlet weak var ctprvnNmLabel: UILabel!
     @IBOutlet weak var signguNmLabel: UILabel!
@@ -35,7 +37,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     var signguNm = NSMutableString() // 시군구명
     var trarArea = NSMutableString() //면적
     var stdrDt = NSMutableString() // 데이터 기준 일자
-    
+    var indsSclsNm = NSMutableString() //상권업종소분류명
   override func viewDidLoad() {
       super.viewDidLoad()
       beginParsing()
@@ -79,6 +81,8 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
             trarArea = ""
             stdrDt = NSMutableString() // 데이터 기준 일자
             stdrDt = ""
+            indsSclsNm = NSMutableString() // 데이터 기준 일자
+            indsSclsNm = ""
         }
       }
       
@@ -111,6 +115,10 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
                 stdrDt.append(string)
               
               }
+          else if element.isEqual(to: "indsSclsNm")
+          {
+            indsSclsNm.append(string)
+        }
       }
    
     func reMatch(){
@@ -121,22 +129,11 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
         trarAreaLabel.text = trarArea as String
         stdrDtLabel.text = stdrDt as String
     }
-    
+   
        // MARK: - Detail View
      var storeAreaName = ""
     
-    func returnStoreListURL(v_trarNo : String) -> String?
-           {
-               let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeListInArea?"
-               let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
-              //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
-               var url : String = ""
-               url = api
-               url += "key="
-              url += v_trarNo
-               url += serKey
-               return url
-           }
+    var sUrl = SearchURL()
     
    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -163,10 +160,10 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
              if let navController = segue.destination as? UINavigationController {
                 if let detailStoreInAreaTableViewController = navController.topViewController as?
                  DetailStoreInAreaTableViewController {
-                    detailStoreInAreaTableViewController.url = returnStoreListURL(v_trarNo: storeAreaName)
+                    detailStoreInAreaTableViewController.url = self.sUrl.returnStoreListURL(v_trarNo: storeAreaName)
       
                 }
-                
+         
             }
             }
         }

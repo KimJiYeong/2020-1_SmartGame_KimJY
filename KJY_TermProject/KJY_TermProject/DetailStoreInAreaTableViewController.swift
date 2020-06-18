@@ -99,7 +99,7 @@ class DetailStoreInAreaTableViewController: UITableViewController,XMLParserDeleg
                        {
                            lat.append(string)
                        }
-            else if element.isEqual(to: "rdnmAddr")
+            else if element.isEqual(to: "rdnmAdr")
             {
                 rdnmAddr.append(string)
             }
@@ -134,7 +134,7 @@ class DetailStoreInAreaTableViewController: UITableViewController,XMLParserDeleg
                 if !rdnmAddr.isEqual(nil) {
                                  
                                  
-                                   elements.setObject(lat, forKey: "rdnmAddr" as NSCopying)
+                                   elements.setObject(lat, forKey: "rdnmAdr" as NSCopying)
                                 
                                }
                   posts.add(elements)

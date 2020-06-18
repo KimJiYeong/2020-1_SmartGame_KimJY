@@ -26,7 +26,7 @@ class StoreInAreaMapViewController: UIViewController, MKMapViewDelegate {
         var initalLocation : CLLocation?
         for post in posts {
             let bizesNm2 = (post as AnyObject).value(forKey: "bizesNm") as! NSString as String
-            let rdnmAddr   = (post as AnyObject).value(forKey: "rdnmAddr") as! NSString as String
+            let rdnmAddr   = (post as AnyObject).value(forKey: "indsLclsNm") as! NSString as String
             let XPos   = (post as AnyObject).value(forKey: "lon") as! NSString as String
             let YPos   = (post as AnyObject).value(forKey: "lat") as! NSString as String
             let lat    = (YPos as NSString).doubleValue

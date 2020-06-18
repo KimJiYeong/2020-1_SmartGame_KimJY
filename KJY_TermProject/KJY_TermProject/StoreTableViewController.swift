@@ -32,21 +32,9 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
 
     }
 // MARK: - Detail View
-    func returnDetailURL(v_trarNo : String) -> String?
-       {
-           let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?"
-           let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
-          //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
-           var url : String = ""
-           url = api
-           url += "key="
-          url += v_trarNo
-           url += serKey
-           return url
-       }
-     
+
   
-       
+    var sUrl  = SearchURL()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -75,7 +63,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                 if let detailStoreWideViewController = segue.destination as?
                     DetailStoreWideViewController {
                     detailStoreWideViewController.temp = storeAreaName
-                    detailStoreWideViewController.url = returnDetailURL(v_trarNo: storeAreaName)
+                    detailStoreWideViewController.url = self.sUrl.returnDetailURL(v_trarNo: storeAreaName)
             
                 }
                
