@@ -19,6 +19,8 @@
 		A14DEF8024A19B2200890859 /* GmarketSansTTFMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A14DEF7B24A19A6300890859 /* GmarketSansTTFMedium.ttf */; };
 		A14DEF8224A1A13D00890859 /* 상권이미지2.png in Resources */ = {isa = PBXBuildFile; fileRef = A14DEF8124A1A13D00890859 /* 상권이미지2.png */; };
 		A14DEF8424A1A4BB00890859 /* 상권 상세 목록 검색.png in Resources */ = {isa = PBXBuildFile; fileRef = A14DEF8324A1A4BB00890859 /* 상권 상세 목록 검색.png */; };
+		A14DEF8624A1AA4000890859 /* MonthlyRevenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DEF8524A1AA4000890859 /* MonthlyRevenueViewController.swift */; };
+		A14DEF8824A1BE8200890859 /* ImageInstallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14DEF8724A1BE8200890859 /* ImageInstallViewController.swift */; };
 		A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B560248E8EDF007063E4 /* StoreTableViewController.swift */; };
 		A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156B562248E974F007063E4 /* StoreSearchViewController.swift */; };
 		A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */; };
@@ -51,6 +53,8 @@
 		A14DEF7D24A19A6300890859 /* GmarketSansTTFLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansTTFLight.ttf; sourceTree = "<group>"; };
 		A14DEF8124A1A13D00890859 /* 상권이미지2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "상권이미지2.png"; sourceTree = "<group>"; };
 		A14DEF8324A1A4BB00890859 /* 상권 상세 목록 검색.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "상권 상세 목록 검색.png"; sourceTree = "<group>"; };
+		A14DEF8524A1AA4000890859 /* MonthlyRevenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyRevenueViewController.swift; sourceTree = "<group>"; };
+		A14DEF8724A1BE8200890859 /* ImageInstallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInstallViewController.swift; sourceTree = "<group>"; };
 		A156B560248E8EDF007063E4 /* StoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableViewController.swift; sourceTree = "<group>"; };
 		A156B562248E974F007063E4 /* StoreSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchViewController.swift; sourceTree = "<group>"; };
 		A1785D22249222EC006FEB9B /* DetailStoreWideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoreWideViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				A1785D332494E596006FEB9B /* MyMenuViewController.swift */,
 				A1785D352494EC19006FEB9B /* classmymenu.swift */,
 				A1DF49A6249B879100548C3C /* SearchURL.swift */,
+				A14DEF8524A1AA4000890859 /* MonthlyRevenueViewController.swift */,
+				A14DEF8724A1BE8200890859 /* ImageInstallViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -237,11 +243,13 @@
 			files = (
 				A1785D2E249252AD006FEB9B /* Artworks.swift in Sources */,
 				A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */,
+				A14DEF8624A1AA4000890859 /* MonthlyRevenueViewController.swift in Sources */,
 				A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */,
 				A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */,
 				A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */,
 				A1785D342494E596006FEB9B /* MyMenuViewController.swift in Sources */,
 				A1785D2724924708006FEB9B /* DetailStoreInAreaTableViewController.swift in Sources */,
+				A14DEF8824A1BE8200890859 /* ImageInstallViewController.swift in Sources */,
 				A1785D29249251D9006FEB9B /* StoreInAreaMapViewController.swift in Sources */,
 				A1785D3224948C21006FEB9B /* StopWatchViewController.swift in Sources */,
 				A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */,

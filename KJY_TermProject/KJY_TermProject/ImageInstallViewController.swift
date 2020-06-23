@@ -1,35 +1,21 @@
 //
-//  MyMenuViewController.swift
+//  ImageInstallViewController.swift
 //  KJY_TermProject
 //
-//  Created by KpuGame on 2020/06/13.
+//  Created by KpuGame on 2020/06/23.
 //  Copyright © 2020 KimJiYeong. All rights reserved.
 //
 
 import UIKit
 
-class MyMenuViewController: UIViewController {
+class ImageInstallViewController: UIViewController {
 
-    @IBOutlet weak var TimeLable: UILabel!
-    
-    var timerLabelText : String?
-    
-    var mymenu = Mymenu()
-    
     override func viewDidLoad() {
-        TimeLable.text = timerLabelText
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
-    @IBAction func doneToStopWatch(segue: UIStoryboardSegue)
-      {
-          
-      }
-    @IBAction func doneToRevenueMoney(segue: UIStoryboardSegue)
-         {
-             
-         }
+    
 
     /*
     // MARK: - Navigation
