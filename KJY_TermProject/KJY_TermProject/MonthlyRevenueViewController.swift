@@ -39,7 +39,8 @@ class MonthlyRevenueViewController: UIViewController {
         outlet_etc.text = String(Int(RevenueETC.value)) + "만원"
     }
     @IBAction func bt_Caculator(_ sender: Any) {
-        totalRevenue = Int(RevenueMonthly.value) - (Int(RevenueRent.value) + Int(RevenueDues.value) + Int(RevenueETC.value));
+        totalRevenue = Int(RevenueMonthly.value)
+        totalRevenue -= (Int(RevenueRent.value) + Int(RevenuePerson.value) + Int(RevenueDues.value) + Int(RevenueETC.value));
         outlet_total.text = String(totalRevenue)
     }
     

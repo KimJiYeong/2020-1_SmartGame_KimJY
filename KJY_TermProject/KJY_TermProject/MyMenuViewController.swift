@@ -28,8 +28,17 @@ class MyMenuViewController: UIViewController {
       }
     @IBAction func doneToRevenueMoney(segue: UIStoryboardSegue)
          {
-             
+            
+             print("Revenue view return")
          }
+    @IBAction func doneToImageView(segue: UIStoryboardSegue)
+            {
+                print("image view return")
+            }
+    @IBAction func doneToMemoView(segue: UIStoryboardSegue)
+            {
+                print("memo view return")
+            }
 
     /*
     // MARK: - Navigation

@@ -31,6 +31,8 @@
 		A1785D3224948C21006FEB9B /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D3124948C21006FEB9B /* StopWatchViewController.swift */; };
 		A1785D342494E596006FEB9B /* MyMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D332494E596006FEB9B /* MyMenuViewController.swift */; };
 		A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1785D352494EC19006FEB9B /* classmymenu.swift */; };
+		A1CC7F7E24A21E7E0083F142 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CC7F7D24A21E7E0083F142 /* defaultPhoto.png */; };
+		A1CC7F8024A232E70083F142 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F7F24A232E70083F142 /* MemoViewController.swift */; };
 		A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF49A6249B879100548C3C /* SearchURL.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
@@ -65,6 +67,8 @@
 		A1785D3124948C21006FEB9B /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		A1785D332494E596006FEB9B /* MyMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenuViewController.swift; sourceTree = "<group>"; };
 		A1785D352494EC19006FEB9B /* classmymenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classmymenu.swift; sourceTree = "<group>"; };
+		A1CC7F7D24A21E7E0083F142 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
+		A1CC7F7F24A232E70083F142 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		A1DF49A6249B879100548C3C /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		A14DEF6A24A194DA00890859 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				A1CC7F7D24A21E7E0083F142 /* defaultPhoto.png */,
 				A14DEF6E24A196B000890859 /* 마이메뉴.png */,
 				A14DEF6F24A196B000890859 /* 북마크.png */,
 				A14DEF6D24A196B000890859 /* 상권검색.png */,
@@ -154,6 +159,7 @@
 				A1DF49A6249B879100548C3C /* SearchURL.swift */,
 				A14DEF8524A1AA4000890859 /* MonthlyRevenueViewController.swift */,
 				A14DEF8724A1BE8200890859 /* ImageInstallViewController.swift */,
+				A1CC7F7F24A232E70083F142 /* MemoViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			files = (
 				A1E4D6BF2487287E00E6B045 /* LaunchScreen.storyboard in Resources */,
 				A14DEF6C24A194EC00890859 /* 그룹 1.png in Resources */,
+				A1CC7F7E24A21E7E0083F142 /* defaultPhoto.png in Resources */,
 				A14DEF8224A1A13D00890859 /* 상권이미지2.png in Resources */,
 				A14DEF7624A197DA00890859 /* 찾고 싶은 지역을 아래 Picker View에서 선택해주세요_ .png in Resources */,
 				A14DEF7124A196B000890859 /* 마이메뉴.png in Resources */,
@@ -254,6 +261,7 @@
 				A1785D3224948C21006FEB9B /* StopWatchViewController.swift in Sources */,
 				A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */,
 				A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */,
+				A1CC7F8024A232E70083F142 /* MemoViewController.swift in Sources */,
 				A1785D2C24925299006FEB9B /* StoreArea.swift in Sources */,
 				A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */,
 				A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */,
