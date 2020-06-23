@@ -55,6 +55,11 @@ class MonthlyRevenueViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? MyMenuViewController else { return }
+        rvc.paramRevenue = self.outlet_total.text!
+    }
     
     /*
      // MARK: - Navigation

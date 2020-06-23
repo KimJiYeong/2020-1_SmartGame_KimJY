@@ -13,19 +13,26 @@ class MemoViewController: UIViewController {
     @IBOutlet weak var memoViewController: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var text2 : String = "123"
+    @IBAction func onPerformSegue(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "memounwindsegue", sender: self)
+        
     }
-    */
-
+    @IBAction func Submit(_ sender: Any) {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? MyMenuViewController else { return }
+        rvc.paramEmail = self.memoViewController.text!
+    }
+    
+   
+    
 }

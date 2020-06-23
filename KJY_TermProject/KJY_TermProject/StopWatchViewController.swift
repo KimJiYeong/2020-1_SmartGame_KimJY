@@ -28,14 +28,7 @@ class StopWatchViewController: UIViewController {
         
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let myMenuViewController = segue.destination as! MyMenuViewController
-        
-        myMenuViewController.timerLabelText = saveTime()
-        
-        
-    }
+ 
     
     
     @IBAction func StartAction(_ sender: Any) {
@@ -81,9 +74,9 @@ class StopWatchViewController: UIViewController {
     }
     func saveTime() -> String {
         var allTimerLabel : String = ""
-        allTimerLabel += firstTime.text! + ":"
+        allTimerLabel += lastTime.text! + ":"
         allTimerLabel += middleTime.text! + ":"
-        allTimerLabel += lastTime.text!
+        allTimerLabel += firstTime.text!
         return allTimerLabel
     }
     
@@ -120,7 +113,11 @@ class StopWatchViewController: UIViewController {
         }
         
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? MyMenuViewController else { return }
+        rvc.paramTime  = self.saveTime()
+    }
     
     /*
      // MARK: - Navigation
