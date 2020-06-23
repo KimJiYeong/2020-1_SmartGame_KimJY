@@ -14,7 +14,7 @@ class MyMenuViewController: UIViewController {
     @IBOutlet weak var ReveuneLabel: UILabel!
     @IBOutlet weak var ImageLabel: UIImageView!
     
-    @IBOutlet weak var memoLabel: UILabel!
+    @IBOutlet weak var memoLabel: UITextView!
     var timerLabelText : String?
     
     var mymenu = Mymenu()

@@ -263,13 +263,15 @@
                                 <rect key="frame" x="0.0" y="633" width="414" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qE-ne-CYP">
-                                <rect key="frame" x="20" y="516" width="374" height="101"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-e5-vip">
+                                <rect key="frame" x="20" y="516" width="374" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="d3J-1X-pte"/>
@@ -279,7 +281,7 @@
                         <outlet property="ImageLabel" destination="W9x-b3-w4a" id="Hdb-gc-0Br"/>
                         <outlet property="ReveuneLabel" destination="Ws1-gX-c74" id="BOF-mA-Omp"/>
                         <outlet property="TimeLable" destination="TYi-0h-EC6" id="eS4-bS-JzB"/>
-                        <outlet property="memoLabel" destination="9qE-ne-CYP" id="QAt-Cd-7xA"/>
+                        <outlet property="memoLabel" destination="kcz-e5-vip" id="V9K-GM-670"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMB-gY-4YH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -512,6 +514,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dSp-Uo-e5G">
                                 <rect key="frame" x="337" y="140" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="bookmarkAction:" destination="9uk-Vb-m90" eventType="valueChanged" id="RY2-Xz-epf"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -519,6 +524,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="q9S-1V-Fh9"/>
                     <connections>
+                        <outlet property="bookmark" destination="dSp-Uo-e5G" id="r77-sb-fOo"/>
                         <outlet property="ctprvnNmLabel" destination="Ne3-Qk-6vz" id="sz0-o7-56O"/>
                         <outlet property="signguNmLabel" destination="ddu-hf-Rlc" id="Fx6-Xp-bwZ"/>
                         <outlet property="stdrDtLabel" destination="qUH-SC-uZW" id="H0S-XR-tmE"/>
@@ -529,7 +535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R71-2M-oo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9694.2028985507259" y="811.60714285714278"/>
+            <point key="canvasLocation" x="7022" y="444"/>
         </scene>
         <!--DetailStoreListInArea-->
         <scene sceneID="pLF-Ug-0XG">
@@ -1041,7 +1047,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCY-U6-HKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10423.188405797102" y="811.60714285714278"/>
+            <point key="canvasLocation" x="9426" y="812"/>
         </scene>
         <!--메모등록-->
         <scene sceneID="PLh-jd-wg4">

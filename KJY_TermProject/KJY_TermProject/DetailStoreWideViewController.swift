@@ -12,6 +12,23 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     
     
     
+    @IBAction func bookmarkAction(_ sender: Any) {
+        if bookmark.isOn
+        {
+            
+            param_taraNo = taraNo as String
+            let rangeOfWorld = param_taraNo!.index(param_taraNo!.endIndex, offsetBy: -5)..<param_taraNo!.endIndex
+            param_taraNo!.removeSubrange(rangeOfWorld) // 결과 : 뒤에 들어가는게 무조건 \n\t\t\t 이니
+        }
+        else
+        {
+            param_taraNo = ""
+        }
+        
+        print("doing!, tarano = \(param_taraNo)")
+        
+    }
+    @IBOutlet weak var bookmark: UISwitch!
     @IBOutlet weak var trarNoLabel: UILabel!
     @IBOutlet weak var ctprvnNmLabel: UILabel!
     @IBOutlet weak var signguNmLabel: UILabel!
@@ -22,7 +39,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     var url : String?
     var temp : String?
     // MARK: - var
-    
+    var param_taraNo : String? //값을 전달해줄 String
     var parser = XMLParser()
     var posts = NSMutableArray()
     var elements = NSMutableDictionary()
@@ -30,7 +47,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     var yadmNm = NSMutableString()
     var addr = NSMutableString()
     //이전 페이지에서 상권 번호를 받아옴
-    
+    var temp_taraNo = NSMutableString()//데이터 변경을 막기 위한 임시 상권번호 변수
     var taraNo = NSMutableString() //상권번호
     var mainTrarNo = NSMutableString() //상권명
     var ctprvnNm = NSMutableString() //시도명
@@ -54,6 +71,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
         parser.parse()
         
         // tbData!.reloadData()
+        temp_taraNo = taraNo
     }
     
     func parser(_ parser:XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName : String?, attributes attributeDice: [String: String])
@@ -166,9 +184,12 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
                 
             }
         }
+     
+     
+    
     }
     
-    
+
 }
 
 
