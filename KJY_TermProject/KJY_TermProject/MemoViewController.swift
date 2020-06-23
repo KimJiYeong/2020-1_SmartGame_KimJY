@@ -33,6 +33,7 @@ class MemoViewController: UIViewController {
         rvc.paramEmail = self.memoViewController.text!
     }
     
+  
    
     
 }

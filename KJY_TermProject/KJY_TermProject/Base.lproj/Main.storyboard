@@ -276,6 +276,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Rt8-XV-Hu9"/>
                     <connections>
+                        <outlet property="ImageLabel" destination="W9x-b3-w4a" id="Hdb-gc-0Br"/>
                         <outlet property="ReveuneLabel" destination="Ws1-gX-c74" id="BOF-mA-Omp"/>
                         <outlet property="TimeLable" destination="TYi-0h-EC6" id="eS4-bS-JzB"/>
                         <outlet property="memoLabel" destination="9qE-ne-CYP" id="QAt-Cd-7xA"/>

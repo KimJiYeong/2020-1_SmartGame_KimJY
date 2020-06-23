@@ -43,4 +43,10 @@ extension ImageInstallViewController : UIImagePickerControllerDelegate, UINaviga
         }
     dismiss(animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          let dest = segue.destination
+          guard let rvc = dest as? MyMenuViewController else { return }
+          rvc.paramImage  = self.img.image
+      }
 }

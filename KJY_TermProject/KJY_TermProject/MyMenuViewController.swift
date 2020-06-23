@@ -12,6 +12,7 @@ class MyMenuViewController: UIViewController {
 
     @IBOutlet weak var TimeLable: UILabel!
     @IBOutlet weak var ReveuneLabel: UILabel!
+    @IBOutlet weak var ImageLabel: UIImageView!
     
     @IBOutlet weak var memoLabel: UILabel!
     var timerLabelText : String?
@@ -20,6 +21,7 @@ class MyMenuViewController: UIViewController {
     var paramEmail : String = ""
     var paramRevenue : String = ""
     var paramTime : String = ""
+    var paramImage : UIImage!
     override func viewDidLoad() {
         TimeLable.text = timerLabelText
         self.memoLabel.text = paramEmail
@@ -41,6 +43,7 @@ class MyMenuViewController: UIViewController {
     @IBAction func doneToImageView(segue: UIStoryboardSegue)
             {
                 print("image view return")
+                self.ImageLabel.image = paramImage
                 
             }
     @IBAction func doneToMemoView(segue: UIStoryboardSegue)
