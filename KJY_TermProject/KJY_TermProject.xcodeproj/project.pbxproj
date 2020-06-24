@@ -39,6 +39,7 @@
 		A1CC7FCC24A2DC8D0083F142 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FCA24A2DC8D0083F142 /* Users+CoreDataProperties.swift */; };
 		A1CC7FCF24A2DCF30083F142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FCE24A2DCF30083F142 /* CoreDataManager.swift */; };
 		A1CC7FD124A2E6550083F142 /* ManiMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */; };
+		A1CC7FD524A30F180083F142 /* bookmarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FD424A30F180083F142 /* bookmarkTableViewController.swift */; };
 		A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF49A6249B879100548C3C /* SearchURL.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
@@ -82,6 +83,7 @@
 		A1CC7FCA24A2DC8D0083F142 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A1CC7FCE24A2DCF30083F142 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManiMenuViewController.swift; sourceTree = "<group>"; };
+		A1CC7FD424A30F180083F142 /* bookmarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkTableViewController.swift; sourceTree = "<group>"; };
 		A1DF49A6249B879100548C3C /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				A1CC7F7F24A232E70083F142 /* MemoViewController.swift */,
 				A1CC7F8124A2B2160083F142 /* bookmarkViewController.swift */,
 				A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */,
+				A1CC7FD424A30F180083F142 /* bookmarkTableViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A1785D2E249252AD006FEB9B /* Artworks.swift in Sources */,
 				A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */,
 				A14DEF8624A1AA4000890859 /* MonthlyRevenueViewController.swift in Sources */,
+				A1CC7FD524A30F180083F142 /* bookmarkTableViewController.swift in Sources */,
 				A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */,
 				A1CC7FCC24A2DC8D0083F142 /* Users+CoreDataProperties.swift in Sources */,
 				A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */,

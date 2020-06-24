@@ -17,18 +17,22 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
         {
             
             param_taraNo = taraNo as String
-            let rangeOfWorld = param_taraNo!.index(param_taraNo!.endIndex, offsetBy: -5)..<param_taraNo!.endIndex
+            var rangeOfWorld = param_taraNo!.index(param_taraNo!.endIndex, offsetBy: -5)..<param_taraNo!.endIndex
             param_taraNo!.removeSubrange(rangeOfWorld) // 결과 : 뒤에 들어가는게 무조건 \n\t\t\t 이니
             // saveNewUser(1, name: "Danny")
-  
-            saveNewUser(1, name: param_taraNo!)
+            
+            param_StoreName = mainTrarNo as String
+            rangeOfWorld = param_StoreName!.index(param_StoreName!.endIndex, offsetBy: -5)..<param_StoreName!.endIndex
+            param_StoreName!.removeSubrange(rangeOfWorld)
+            
+            saveNewUser(1, name: param_taraNo!, storename: param_StoreName!)
         }
         else
         {
             param_taraNo = ""
         }
         
-        print("doing!, tarano = \(param_taraNo)")
+        print("doing!, tarano = \(param_taraNo)  storename = \(param_StoreName!)")
         
     }
     @IBOutlet weak var bookmark: UISwitch!
@@ -43,6 +47,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     var temp : String?
     // MARK: - var
     var param_taraNo : String? //값을 전달해줄 String
+     var param_StoreName : String? //값을 전달해줄 String
     var parser = XMLParser()
     var posts = NSMutableArray()
     var elements = NSMutableDictionary()
@@ -202,9 +207,9 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
         }
     }
     // 새로운 유저 등록
-    fileprivate func saveNewUser(_ id: Int64, name: String) {
+    fileprivate func saveNewUser(_ id: Int64, name: String, storename : String) {
         CoreDataManager.shared
-            .saveUser(id: id, name: name, date: Date()) { onSuccess in
+            .saveUser(id: id, name: name, storename: storename,  date: Date()) { onSuccess in
                         print("saved = \(onSuccess)")
         }
     }

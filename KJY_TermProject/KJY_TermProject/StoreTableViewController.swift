@@ -63,7 +63,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
                 if let detailStoreWideViewController = segue.destination as?
                     DetailStoreWideViewController {
                     detailStoreWideViewController.temp = storeAreaName
-                    detailStoreWideViewController.url = self.sUrl.returnDetailURL(v_trarNo: storeAreaName)
+                    detailStoreWideViewController.url = self.sUrl.returnStoreZoneOneURL(v_trarNo: storeAreaName)
                     
                 }
                 
@@ -134,6 +134,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
             posts.add(elements)
         }
     }
+     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
@@ -144,7 +145,7 @@ class StoreTableViewController: UITableViewController, XMLParserDelegate {
         return cell
     }
     
-    // MARK: - Table view data source
+   
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

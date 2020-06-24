@@ -39,114 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "783C6406-5323-4CB4-939A-24355E6792CC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "KJY_TermProject/DetailStoreWideViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "DetailStoreWideViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - c5c288081d70723"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.v_trarNo.getter : Swift.String"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "139">
-               </Location>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - 421aed5cb9beb757"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.v_trarNo.setter : Swift.String"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "174">
-               </Location>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - e5079e32b927ab26"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.v_trarNo.modify : Swift.String"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - c72c549621f2e3ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.v_trarNo.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - e8853ded69516ac5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; KJY_TermProject.DetailStoreWideViewController"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "909">
-               </Location>
-               <Location
-                  uuid = "783C6406-5323-4CB4-939A-24355E6792CC - 3f4e9d2175275d81"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "KJY_TermProject.DetailStoreWideViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;KJY_TermProject.DetailStoreWideViewController&gt;"
-                  moduleName = "KJY_TermProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kpugame/Documents/GitHub/2020-1_SmartGame_KimJY/KJY_TermProject/KJY_TermProject/DetailStoreWideViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "844">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "205E8620-4F3E-4001-82D2-49CE717066DE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -186,10 +78,58 @@
             filePath = "KJY_TermProject/DetailStoreWideViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "reMatch()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "196BF28E-F7C2-4DAF-AF5D-3665ED667F8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Downloads/CoreDataDemo-master/CoreDataDemo/CoreData/Managers/CoreDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "resetUser(onSuccess:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "878030A5-300C-462E-9606-A45568D40E3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/StoreTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99F35A32-C30A-47AB-A089-DCFC1EAF03CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KJY_TermProject/bookmarkTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "bookmarkTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

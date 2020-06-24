@@ -52,8 +52,8 @@ class SearchURL {
         url += serKey
         return url
     }
-    
-    func returnDetailURL(v_trarNo : String) -> String?
+  
+    func returnStoreZoneOneURL(v_trarNo : String) -> String?   //storeZoneOne
        {
            let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneOne?"
            let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"

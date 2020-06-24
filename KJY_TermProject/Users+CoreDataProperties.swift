@@ -19,6 +19,7 @@ extension Users {
 
     @NSManaged public var id: Int64
     @NSManaged public var name: String?
+    @NSManaged public var storename: String?
     @NSManaged public var signupDate: Date?
 
 }
