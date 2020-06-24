@@ -28,7 +28,18 @@ class SearchURL {
         url += serKey
         return url
     }
-    
+    func returnURL_string(ctprvnCD: String) -> String?
+      {
+          let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeZoneInAdmi?"
+          let serKey : String = "&ServiceKey=d1dnU5KOcFu3kxN0WqezfuNwFhRQbxC1WsHisyn3peY%2FOnnDX5yEoSBr10CoTjvj46PevWSgiJTwhdAm%2FJPTxw%3D%3D"
+         //let url : String  = api + "divId=ctprvnCd&" + "key=" + ctprvnCD + "&" + serKey
+          var url : String = ""
+          url = api
+          url += "divId=ctprvnCd&"
+          url += ("key=" + ctprvnCD)
+          url += serKey
+          return url
+      }
     func returnStoreListURL(v_trarNo : String) -> String?
     {
         let api : String = "http://apis.data.go.kr/B553077/api/open/sdsc/storeListInArea?"

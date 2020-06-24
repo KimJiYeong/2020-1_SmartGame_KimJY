@@ -18,10 +18,17 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        resetUser()
+        print("reset all data")
         
     }
-
+    fileprivate func resetUser()
+    {
+        CoreDataManager.shared.resetUser() {
+            onSuccess in print("reset")
+        }
+        
+    }
 
 }
 

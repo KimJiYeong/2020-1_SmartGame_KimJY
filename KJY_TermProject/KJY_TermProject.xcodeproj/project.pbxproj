@@ -34,10 +34,11 @@
 		A1CC7F7E24A21E7E0083F142 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CC7F7D24A21E7E0083F142 /* defaultPhoto.png */; };
 		A1CC7F8024A232E70083F142 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F7F24A232E70083F142 /* MemoViewController.swift */; };
 		A1CC7F8224A2B2160083F142 /* bookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F8124A2B2160083F142 /* bookmarkViewController.swift */; };
-		A1CC7F9024A2BD2B0083F142 /* Users.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F8D24A2BD2B0083F142 /* Users.xcdatamodeld */; };
-		A1CC7F9324A2BD430083F142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F9224A2BD430083F142 /* CoreDataManager.swift */; };
-		A1CC7F9D24A2BDCA0083F142 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F9B24A2BDCA0083F142 /* Users+CoreDataClass.swift */; };
-		A1CC7F9E24A2BDCA0083F142 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7F9C24A2BDCA0083F142 /* Users+CoreDataProperties.swift */; };
+		A1CC7FC524A2DC0F0083F142 /* Users.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FB324A2DC0E0083F142 /* Users.xcdatamodeld */; };
+		A1CC7FCB24A2DC8D0083F142 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FC924A2DC8D0083F142 /* Users+CoreDataClass.swift */; };
+		A1CC7FCC24A2DC8D0083F142 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FCA24A2DC8D0083F142 /* Users+CoreDataProperties.swift */; };
+		A1CC7FCF24A2DCF30083F142 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FCE24A2DCF30083F142 /* CoreDataManager.swift */; };
+		A1CC7FD124A2E6550083F142 /* ManiMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */; };
 		A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DF49A6249B879100548C3C /* SearchURL.swift */; };
 		A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B22487287D00E6B045 /* AppDelegate.swift */; };
 		A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E4D6B42487287D00E6B045 /* SceneDelegate.swift */; };
@@ -75,11 +76,12 @@
 		A1CC7F7D24A21E7E0083F142 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
 		A1CC7F7F24A232E70083F142 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		A1CC7F8124A2B2160083F142 /* bookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookmarkViewController.swift; sourceTree = "<group>"; };
-		A1CC7F8E24A2BD2B0083F142 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
-		A1CC7F8F24A2BD2B0083F142 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
-		A1CC7F9224A2BD430083F142 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		A1CC7F9B24A2BDCA0083F142 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A1CC7F9C24A2BDCA0083F142 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1CC7FB424A2DC0E0083F142 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
+		A1CC7FB524A2DC0E0083F142 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		A1CC7FC924A2DC8D0083F142 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A1CC7FCA24A2DC8D0083F142 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A1CC7FCE24A2DCF30083F142 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManiMenuViewController.swift; sourceTree = "<group>"; };
 		A1DF49A6249B879100548C3C /* SearchURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchURL.swift; sourceTree = "<group>"; };
 		A1E4D6AF2487287D00E6B045 /* KJY_TermProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJY_TermProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E4D6B22487287D00E6B045 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,29 +133,29 @@
 			path = Mapkit;
 			sourceTree = "<group>";
 		};
-		A1CC7F8C24A2BD2B0083F142 /* CoreData */ = {
+		A1CC7FB224A2DC0E0083F142 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A1CC7F9124A2BD430083F142 /* Managers */,
-				A1CC7F8D24A2BD2B0083F142 /* Users.xcdatamodeld */,
+				A1CC7FCD24A2DCF30083F142 /* Managers */,
+				A1CC7FB324A2DC0E0083F142 /* Users.xcdatamodeld */,
 			);
-			path = CoreData;
+			name = CoreData;
+			path = "../../../../../Downloads/CoreDataDemo-master/CoreDataDemo/CoreData";
 			sourceTree = "<group>";
 		};
-		A1CC7F9124A2BD430083F142 /* Managers */ = {
+		A1CC7FCD24A2DCF30083F142 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A1CC7F9224A2BD430083F142 /* CoreDataManager.swift */,
+				A1CC7FCE24A2DCF30083F142 /* CoreDataManager.swift */,
 			);
-			name = Managers;
-			path = "../../../../../../Downloads/CoreDataDemo-master/CoreDataDemo/Managers";
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		A1E4D6A62487287D00E6B045 = {
 			isa = PBXGroup;
 			children = (
-				A1CC7F9B24A2BDCA0083F142 /* Users+CoreDataClass.swift */,
-				A1CC7F9C24A2BDCA0083F142 /* Users+CoreDataProperties.swift */,
+				A1CC7FC924A2DC8D0083F142 /* Users+CoreDataClass.swift */,
+				A1CC7FCA24A2DC8D0083F142 /* Users+CoreDataProperties.swift */,
 				A1E4D6B12487287D00E6B045 /* KJY_TermProject */,
 				A1E4D6B02487287D00E6B045 /* Products */,
 			);
@@ -170,7 +172,7 @@
 		A1E4D6B12487287D00E6B045 /* KJY_TermProject */ = {
 			isa = PBXGroup;
 			children = (
-				A1CC7F8C24A2BD2B0083F142 /* CoreData */,
+				A1CC7FB224A2DC0E0083F142 /* CoreData */,
 				A14DEF6A24A194DA00890859 /* New Group */,
 				A1785D2A24925284006FEB9B /* Mapkit */,
 				A1785D2624924708006FEB9B /* DetailStoreInAreaTableViewController.swift */,
@@ -193,6 +195,7 @@
 				A14DEF8724A1BE8200890859 /* ImageInstallViewController.swift */,
 				A1CC7F7F24A232E70083F142 /* MemoViewController.swift */,
 				A1CC7F8124A2B2160083F142 /* bookmarkViewController.swift */,
+				A1CC7FD024A2E6550083F142 /* ManiMenuViewController.swift */,
 			);
 			path = KJY_TermProject;
 			sourceTree = "<group>";
@@ -285,23 +288,24 @@
 				A1E4D6B72487287D00E6B045 /* ViewController.swift in Sources */,
 				A14DEF8624A1AA4000890859 /* MonthlyRevenueViewController.swift in Sources */,
 				A1785D362494EC19006FEB9B /* classmymenu.swift in Sources */,
+				A1CC7FCC24A2DC8D0083F142 /* Users+CoreDataProperties.swift in Sources */,
 				A1DF49A7249B879100548C3C /* SearchURL.swift in Sources */,
 				A156B561248E8EDF007063E4 /* StoreTableViewController.swift in Sources */,
-				A1CC7F9324A2BD430083F142 /* CoreDataManager.swift in Sources */,
+				A1CC7FD124A2E6550083F142 /* ManiMenuViewController.swift in Sources */,
 				A1785D342494E596006FEB9B /* MyMenuViewController.swift in Sources */,
 				A1785D2724924708006FEB9B /* DetailStoreInAreaTableViewController.swift in Sources */,
 				A1CC7F8224A2B2160083F142 /* bookmarkViewController.swift in Sources */,
+				A1CC7FCF24A2DCF30083F142 /* CoreDataManager.swift in Sources */,
 				A14DEF8824A1BE8200890859 /* ImageInstallViewController.swift in Sources */,
 				A1785D29249251D9006FEB9B /* StoreInAreaMapViewController.swift in Sources */,
 				A1785D3224948C21006FEB9B /* StopWatchViewController.swift in Sources */,
-				A1CC7F9024A2BD2B0083F142 /* Users.xcdatamodeld in Sources */,
-				A1CC7F9D24A2BDCA0083F142 /* Users+CoreDataClass.swift in Sources */,
 				A1E4D6B32487287D00E6B045 /* AppDelegate.swift in Sources */,
-				A1CC7F9E24A2BDCA0083F142 /* Users+CoreDataProperties.swift in Sources */,
 				A156B563248E974F007063E4 /* StoreSearchViewController.swift in Sources */,
+				A1CC7FC524A2DC0F0083F142 /* Users.xcdatamodeld in Sources */,
 				A1CC7F8024A232E70083F142 /* MemoViewController.swift in Sources */,
 				A1785D2C24925299006FEB9B /* StoreArea.swift in Sources */,
 				A1785D23249222EC006FEB9B /* DetailStoreWideViewController.swift in Sources */,
+				A1CC7FCB24A2DC8D0083F142 /* Users+CoreDataClass.swift in Sources */,
 				A1E4D6B52487287D00E6B045 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,13 +506,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A1CC7F8D24A2BD2B0083F142 /* Users.xcdatamodeld */ = {
+		A1CC7FB324A2DC0E0083F142 /* Users.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A1CC7F8E24A2BD2B0083F142 /* Users.xcdatamodel */,
-				A1CC7F8F24A2BD2B0083F142 /* User.xcdatamodel */,
+				A1CC7FB424A2DC0E0083F142 /* Users.xcdatamodel */,
+				A1CC7FB524A2DC0E0083F142 /* User.xcdatamodel */,
 			);
-			currentVersion = A1CC7F8E24A2BD2B0083F142 /* Users.xcdatamodel */;
+			currentVersion = A1CC7FB424A2DC0E0083F142 /* Users.xcdatamodel */;
 			path = Users.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

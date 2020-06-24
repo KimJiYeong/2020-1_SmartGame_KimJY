@@ -19,6 +19,9 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
             param_taraNo = taraNo as String
             let rangeOfWorld = param_taraNo!.index(param_taraNo!.endIndex, offsetBy: -5)..<param_taraNo!.endIndex
             param_taraNo!.removeSubrange(rangeOfWorld) // 결과 : 뒤에 들어가는게 무조건 \n\t\t\t 이니
+            // saveNewUser(1, name: "Danny")
+  
+            saveNewUser(1, name: param_taraNo!)
         }
         else
         {
@@ -59,6 +62,7 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
         super.viewDidLoad()
         beginParsing()
         reMatch()
+        //deleteUser(1);
         
     }
     
@@ -189,6 +193,21 @@ class DetailStoreWideViewController: UIViewController, XMLParserDelegate {
     
     }
     
+    // MARK: - Data Save Delete 기능
+ 
+    //유저 삭제
+    fileprivate func deleteUser(_ id: Int64) {
+        CoreDataManager.shared.deleteUser(id: id) { onSuccess in
+            print("deleted = \(onSuccess)")
+        }
+    }
+    // 새로운 유저 등록
+    fileprivate func saveNewUser(_ id: Int64, name: String) {
+        CoreDataManager.shared
+            .saveUser(id: id, name: name, date: Date()) { onSuccess in
+                        print("saved = \(onSuccess)")
+        }
+    }
 
 }
 

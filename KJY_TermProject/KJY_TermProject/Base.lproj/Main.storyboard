@@ -62,7 +62,7 @@
         <!--Menu-->
         <scene sceneID="fQh-3f-P2g">
             <objects>
-                <viewController title="Menu" id="0Om-At-jn9" sceneMemberID="viewController">
+                <viewController title="Menu" id="0Om-At-jn9" customClass="ManiMenuViewController" customModule="KJY_TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFh-Jg-Btf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="북마크"/>
                                 <connections>
-                                    <segue destination="Ee6-TY-3vL" kind="push" id="Xnt-I7-nC9"/>
+                                    <action selector="Bt_On_Bookmark:" destination="0Om-At-jn9" eventType="touchUpInside" id="KC3-aF-JVR"/>
+                                    <segue destination="Ee6-TY-3vL" kind="push" identifier="seguetobookmark" id="Xnt-I7-nC9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-xV-QAo">
@@ -288,16 +289,16 @@
             </objects>
             <point key="canvasLocation" x="3273.913043478261" y="811.60714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Bookmark View Controller-->
         <scene sceneID="2cV-fO-bBk">
             <objects>
-                <viewController id="Ee6-TY-3vL" sceneMemberID="viewController">
+                <viewController id="Ee6-TY-3vL" customClass="bookmarkViewController" customModule="KJY_TermProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tk9-m9-5Vl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="guW-Gt-WAl">
-                                <rect key="frame" x="20" y="238" width="374" height="624"/>
+                                <rect key="frame" x="20" y="513" width="374" height="349"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -332,15 +333,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-Eb-e3e">
+                                <rect key="frame" x="62" y="269" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNa-xT-Qbq">
+                                <rect key="frame" x="132" y="269" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-T0-hyd">
+                                <rect key="frame" x="62" y="308" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1a-AC-bXL">
+                                <rect key="frame" x="132" y="307" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hRx-ws-3aC"/>
                     </view>
                     <navigationItem key="navigationItem" id="rZC-iV-y4F"/>
+                    <connections>
+                        <outlet property="temp_paraname1" destination="wNa-xT-Qbq" id="BGM-EC-NH9"/>
+                        <outlet property="temp_paraname2" destination="k1a-AC-bXL" id="cly-rh-YqW"/>
+                        <outlet property="temp_paranum1" destination="GQe-Eb-e3e" id="GSb-FQ-riY"/>
+                        <outlet property="temp_paranum2" destination="jvZ-T0-hyd" id="hgz-Pl-jPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFV-aC-vuq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="812"/>
+            <point key="canvasLocation" x="2547.826086956522" y="811.60714285714278"/>
         </scene>
         <!--상권상세정보-->
         <scene sceneID="ZR3-6n-rHb">

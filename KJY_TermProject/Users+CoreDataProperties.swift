@@ -17,8 +17,6 @@ extension Users {
         return NSFetchRequest<Users>(entityName: "Users")
     }
 
-    @NSManaged public var age: Int64
-    @NSManaged public var devices: [String]?
     @NSManaged public var id: Int64
     @NSManaged public var name: String?
     @NSManaged public var signupDate: Date?

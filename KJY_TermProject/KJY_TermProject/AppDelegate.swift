@@ -12,7 +12,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - CoreData
           lazy var persistentContainer: NSPersistentContainer = {
-              let container = NSPersistentContainer(name: "Model") // 여기는 파일명을 적어줘요.
+              let container = NSPersistentContainer(name: "Users") // 여기는 파일명을 적어줘요.
               container.loadPersistentStores(completionHandler: { (storeDescription, error) in
                   if let error = error {
                       fatalError("Unresolved error, \((error as NSError).userInfo)")
