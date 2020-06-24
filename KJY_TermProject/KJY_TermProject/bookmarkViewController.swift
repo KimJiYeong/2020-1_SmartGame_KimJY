@@ -10,11 +10,7 @@ import UIKit
 
 class bookmarkViewController: UIViewController, XMLParserDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var temp_paranum1: UILabel!
-    @IBOutlet weak var temp_paranum2: UILabel!
-    @IBOutlet weak var temp_paraname1: UILabel!
-    @IBOutlet weak var temp_paraname2: UILabel!
+  
     @IBOutlet weak var bookmarkingNum: UILabel!
     
     var temp_paraNoArray : [String]?
@@ -75,8 +71,7 @@ class bookmarkViewController: UIViewController, XMLParserDelegate {
     
     
     func reMatch(){
-        temp_paranum1.text = taraNo as String
-        temp_paraname1.text = mainTrarNo as String
+       
         bookmarkingNum.text = String(loopcount) as String
     }
 
