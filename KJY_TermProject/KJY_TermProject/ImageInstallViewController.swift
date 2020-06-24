@@ -10,9 +10,14 @@ import Photos
 
 class ImageInstallViewController: UIViewController
 {
+    @IBOutlet weak var OutputTextField: UILabel!
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var inputTextField: UITextField!
     var imagePicker = UIImagePickerController()
     
+    @IBAction func SetNameAction(_ sender: Any) {
+        OutputTextField.text = inputTextField.text
+    }
     
     @IBAction func onclick(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
@@ -48,5 +53,6 @@ extension ImageInstallViewController : UIImagePickerControllerDelegate, UINaviga
           let dest = segue.destination
           guard let rvc = dest as? MyMenuViewController else { return }
           rvc.paramImage  = self.img.image
+        rvc.paraDicpic = self.OutputTextField.text!
       }
 }

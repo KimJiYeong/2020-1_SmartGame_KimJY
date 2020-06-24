@@ -15,6 +15,7 @@ class bookmarkViewController: UIViewController, XMLParserDelegate {
     
     var temp_paraNoArray : [String]?
     var temp_StoreNameArray : [String]?
+    var temp_paraNo : String?
     var paramurl : String?
     var url : String?
     var parser = XMLParser()
@@ -32,7 +33,6 @@ class bookmarkViewController: UIViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         getAllUsers()
-        
         
         //url create
         //self.url = self.sUrl.returnStoreZoneOneURL(v_trarNo: temp_paraNoArray![0] )

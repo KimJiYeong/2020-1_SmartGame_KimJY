@@ -1,5 +1,5 @@
 //
-//  bookmarkTableViewController.swift
+//  SelectNameTableViewController.swift
 //  KJY_TermProject
 //
 //  Created by KpuGame on 2020/06/24.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class bookmarkTableViewController: UITableViewController {
+class SelectNameTableViewController: UITableViewController {
     
-    @IBAction func ButtonAction(_ sender: Any) {
-        print("\(temp_index) ")
-        
-        print(storeAreaName)
-    }
     var temp_paraNoArray : [String]?
     var temp_StoreNameArray : [String]?
     var loopcount : Int = 0
@@ -26,7 +21,7 @@ class bookmarkTableViewController: UITableViewController {
     var storeAreaName = ""
     var storeAreaName_utf8 = ""
     var temp_index : Int = 0
-      var sUrl = SearchURL()
+    var sUrl = SearchURL()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +39,9 @@ class bookmarkTableViewController: UITableViewController {
             elements.setObject(temp_paraNoArray![i], forKey: "taraNo" as NSCopying)
             elements.setObject(temp_StoreNameArray![i], forKey: "StoreName" as NSCopying)
             posts.add(elements) //posts에 정보를더한다.
-
+            
         }
-      
+        
         
     }
     // MARK: - data source
@@ -75,31 +70,30 @@ class bookmarkTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return posts.count
+        return loopcount
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segueToStoreDetail23" {
-            if let cell = sender as? UITableViewCell {
-           let indexPath = tableView.indexPath(for: cell)
-            storeAreaName = temp_paraNoArray![indexPath!.row]
-           temp_index = indexPath!.row
-           if let rowViewController = segue.destination as?
-               RowViewController {
-               rowViewController.temp = storeAreaName
-               rowViewController.url = self.sUrl.returnStoreZoneOneURL(v_trarNo: storeAreaName)
-               
-           }
-          
-     
-       }
-
-         
-   }
-       
         
-   
+        if segue.identifier == "doneSeguetoMyMenu" {
+            if let cell = sender as? UITableViewCell {
+                let indexPath = tableView.indexPath(for: cell)
+                storeAreaName = temp_paraNoArray![indexPath!.row]
+                temp_index = indexPath!.row
+                if let mymenuViewController = segue.destination as?
+                    MyMenuViewController {
+                    mymenuViewController.paramText1 = temp_StoreNameArray![indexPath!.row]
+                    mymenuViewController.paramText2 = temp_paraNoArray![indexPath!.row]
+                print("\(temp_paraNoArray![indexPath!.row]) + \(temp_StoreNameArray![indexPath!.row])")
+                }
+                
+                
+            }
+            
+        }
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -109,7 +103,7 @@ class bookmarkTableViewController: UITableViewController {
         cell.detailTextLabel?.text = temp_paraNoArray![indexPath.row]
         
         return cell
-
+        
     }
     
     
