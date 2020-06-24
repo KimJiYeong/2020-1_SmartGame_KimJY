@@ -136,6 +136,45 @@
                                 <rect key="frame" x="42" y="373" width="327" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-ZR-pxo">
+                                <rect key="frame" x="36" y="638" width="358" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="음성검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-ds-we2">
+                                <rect key="frame" x="73" y="605" width="74" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="19"/>
+                                <color key="textColor" red="0.26688281339999997" green="0.52988771050000005" blue="0.55117489689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-O3-02J">
+                                <rect key="frame" x="210" y="603" width="85" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                <color key="tintColor" red="0.1901791692" green="0.73887318369999999" blue="0.72042119500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start" image="mic.fill" catalog="system">
+                                    <color key="titleColor" red="0.1901791692" green="0.73887318369999999" blue="0.72042119500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTranscribing:" destination="7GY-wI-1ko" eventType="touchUpInside" id="zTG-9t-SgW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dT-10-GPm">
+                                <rect key="frame" x="303" y="602" width="91" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GmarketSansTTFMedium" family="Gmarket Sans TTF" pointSize="17"/>
+                                <color key="tintColor" red="0.1901791692" green="0.73887318369999999" blue="0.72042119500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop" image="mic.slash.fill" catalog="system">
+                                    <color key="titleColor" red="0.1901791692" green="0.73887318369999999" blue="0.72042119500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTranscribing:" destination="7GY-wI-1ko" eventType="touchUpInside" id="DRn-Yh-y5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KGx-Q1-dFF"/>
@@ -149,7 +188,10 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="myTextView" destination="T4T-ZR-pxo" id="Z7Q-Md-U2o"/>
                         <outlet property="pickerView" destination="yF5-VV-72j" id="Tcc-wG-dn4"/>
+                        <outlet property="stopButton" destination="8dT-10-GPm" id="KIf-OS-VhK"/>
+                        <outlet property="transcribeButton" destination="CgU-O3-02J" id="6wh-MJ-pFZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VP1-Tj-CV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -303,7 +345,7 @@
             </objects>
             <point key="canvasLocation" x="3273.913043478261" y="811.60714285714278"/>
         </scene>
-        <!--Select Name Table View Controller-->
+        <!--상가설정-->
         <scene sceneID="7IB-ay-4ll">
             <objects>
                 <tableViewController id="MO1-uO-4Sg" customClass="SelectNameTableViewController" customModule="KJY_TermProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,12 +354,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="wtd-AH-pjQ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Wzl-ug-ADO" detailTextLabel="itN-gV-NPL" style="IBUITableViewCellStyleSubtitle" id="wtd-AH-pjQ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wtd-AH-pjQ" id="7yU-sH-Gsl">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wzl-ug-ADO">
+                                            <rect key="frame" x="20" y="11" width="48" height="19"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="GmarketSansTTFBold" family="Gmarket Sans TTF" pointSize="19"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="itN-gV-NPL">
+                                            <rect key="frame" x="20" y="30" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="wOq-NU-3Mc" kind="unwind" identifier="doneSeguetoMyMenu" unwindAction="doneToSelectNameWithSegue:" id="SHx-lH-Wv3"/>
@@ -329,7 +387,7 @@
                             <outlet property="delegate" destination="MO1-uO-4Sg" id="uIz-vV-zKW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XeX-bq-Lg1"/>
+                    <navigationItem key="navigationItem" title="상가설정" id="XeX-bq-Lg1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaB-HF-D10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wOq-NU-3Mc" userLabel="Exit" sceneMemberID="exit"/>
@@ -352,16 +410,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n98-CV-Y5A">
-                                            <rect key="frame" x="272" y="16" width="76" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="rays" catalog="system">
-                                                <color key="titleColor" red="0.1901791692" green="0.73887318369999999" blue="0.72042119500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="ButtonAction:" destination="xem-8F-O1Y" eventType="touchUpInside" id="kJv-U0-Kn8"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NDh-69-Wt2">
                                             <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -639,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R71-2M-oo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8842.0289855072479" y="443.97321428571428"/>
+            <point key="canvasLocation" x="5835" y="812"/>
         </scene>
         <!--DetailStoreListInArea-->
         <scene sceneID="pLF-Ug-0XG">
@@ -693,7 +741,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q67-rC-nZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7931.884057971015" y="1481.9196428571429"/>
+            <point key="canvasLocation" x="5835" y="1513"/>
         </scene>
         <!--MapView-->
         <scene sceneID="Sg7-4v-jMM">
@@ -718,7 +766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ota-R5-Qg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8623.188405797102" y="1481.9196428571429"/>
+            <point key="canvasLocation" x="6586" y="1513"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ptr-wf-QhQ">
@@ -898,6 +946,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="상권이미지2" translatesAutoresizingMaskIntoConstraints="NO" id="6P0-2b-8Nd">
+                                <rect key="frame" x="-49" y="572" width="512" height="324"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -939,7 +991,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5YN-oX-hRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Pu5-gn-VcY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="1539"/>
+            <point key="canvasLocation" x="2547.826086956522" y="1538.8392857142856"/>
         </scene>
         <!--월 수익 측정-->
         <scene sceneID="Qow-XT-TVO">
@@ -1165,7 +1217,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WCY-U6-HKQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11244.927536231886" y="811.60714285714278"/>
+            <point key="canvasLocation" x="6586" y="812"/>
         </scene>
         <!--메모등록-->
         <scene sceneID="PLh-jd-wg4">
@@ -1331,10 +1383,11 @@
         <image name="defaultPhoto.png" width="1080" height="1080"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
         <image name="map.fill" catalog="system" width="128" height="113"/>
+        <image name="mic.fill" catalog="system" width="108" height="128"/>
+        <image name="mic.slash.fill" catalog="system" width="112" height="128"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="rays" catalog="system" width="128" height="122"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="그룹 1.png" width="132" height="210"/>
         <image name="마이메뉴" width="129" height="31"/>

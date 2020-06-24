@@ -14,8 +14,8 @@
             filePath = "KJY_TermProject/StoreSearchViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "StoreSearchViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "KJY_TermProject/bookmarkTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>

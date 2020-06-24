@@ -10,11 +10,7 @@ import UIKit
 
 class bookmarkTableViewController: UITableViewController {
     
-    @IBAction func ButtonAction(_ sender: Any) {
-        print("\(temp_index) ")
-        
-        print(storeAreaName)
-    }
+   
     var temp_paraNoArray : [String]?
     var temp_StoreNameArray : [String]?
     var loopcount : Int = 0
